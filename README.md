@@ -1,7 +1,7 @@
 pytorch_warmcosinelr
 ===
 
-Warmup CosineAnnealingLR for pytorch.
+Warmup CosineAnnealingLR for PyTorch.
 
 ![](./image.png)
 
