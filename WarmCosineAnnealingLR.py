@@ -18,7 +18,7 @@ class WarmCosineAnnealingLR(_LRScheduler):
                           "please use `get_last_lr()`.", UserWarning)
 
         if self.last_epoch == 0:
-            return [self.eta_min + 1e-8 for _ in self.base_lrs]
+            return [lr / 1e-2 for lr in self.base_lrs]
         if self.last_epoch < self.warmup:
             return [self.eta_min + (base_lr - self.eta_min) *
                     (1 - math.cos(math.pi * self.last_epoch / self.warmup)) / 2
